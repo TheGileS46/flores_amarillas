@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+    <meta name="theme-color" content="#f6c94d" />
+    <meta name="description" content="Un paseo entre flores amarillas, hecho con amor." />
+    <title>Flores para ti 💛</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main id="game-shell" aria-label="Juego Flores para ti">
+      <div id="game-canvas" aria-hidden="true"></div>
+
+      <section id="hud" class="hud is-hidden" aria-live="polite">
+        <div class="brand-lockup">
+          <span class="brand-flower">✿</span>
+          <div>
+            <p class="eyebrow">un detalle para ti</p>
+            <h1>Flores para ti</h1>
+          </div>
+        </div>
+
+        <div class="progress-card">
+          <div class="progress-copy">
+            <span>Tu ramo</span>
+            <strong><span id="flower-count">0</span> / <span id="flower-total">6</span></strong>
+          </div>
+          <div class="progress-track"><span id="progress-fill"></span></div>
+        </div>
+
+        <p id="nearby-message" class="nearby-message"></p>
+      </section>
+
+      <div id="desktop-hint" class="control-hint is-hidden">
+        <span class="mouse-hint">Arrastra</span> o <span class="key-hint">WASD</span> para caminar · <span class="key-hint">E</span> recoger
+      </div>
+
+      <section id="touch-controls" class="touch-controls is-hidden" aria-label="Controles táctiles">
+        <div id="joystick" class="joystick" aria-label="Joystick de movimiento">
+          <div id="joystick-knob" class="joystick-knob"></div>
+        </div>
+        <button id="collect-button" class="collect-button" type="button" aria-label="Recoger flor">
+          <span class="button-flower">✿</span>
+          <span>recoger</span>
+        </button>
+      </section>
+
+      <section id="welcome-screen" class="screen-card">
+        <div class="card-flower art-flower-one">✿</div>
+        <div class="card-flower art-flower-two">✿</div>
+        <p class="eyebrow">un paseo hecho con amor</p>
+        <h2>Flores<br /><em>para ti</em></h2>
+        <p class="intro-copy">Recoge todas las flores amarillas del jardín y prepara un ramo muy especial.</p>
+        <p class="dedication">Para la mujer que hace más bonito cada día.</p>
+        <button id="start-button" class="primary-button" type="button">Comenzar el paseo <span>→</span></button>
+        <p class="tiny-note">Hecho con cariño, para jugar juntitos</p>
+      </section>
+
+      <section id="complete-screen" class="screen-card is-hidden">
+        <div class="bouquet-icon">💐</div>
+        <p class="eyebrow">ramo completado</p>
+        <h2>Lo hice<br /><em>por ti</em></h2>
+        <p class="love-message">Cada flor me recordó lo mucho que iluminas mi vida.<br /><strong>Te amo mucho. 💛</strong></p>
+        <p class="dedication">Este ramo es para ti, mi amor.</p>
+        <button id="restart-button" class="primary-button" type="button">Volver a pasear <span>↻</span></button>
+      </section>
+
+      <div id="toast" class="toast" role="status"></div>
+    </main>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
